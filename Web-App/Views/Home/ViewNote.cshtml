@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model FirstLab.Data.Models.Note
+
+<div class="wrapper">
+    <div class="content">
+        <div class="title">@Html.DisplayName(Model.Title)</div>
+        <p class="text">@Html.Raw(Model.Text)</p>
+    </div>
+</div>
+
+<div class="razdelit">
+    <div class="buttons">
+        <a class="text-dark edit button" asp-area="" asp-controller="Home" asp-route-id="@Model.Id" asp-action="EditNote">Редактировать</a>
+
+        <a class="text-dark default button" asp-area="" asp-controller="Home" asp-route-id="@Model.Id" asp-action="DeleteNote">Удалить</a>
+    </div>
+    </div>
+
